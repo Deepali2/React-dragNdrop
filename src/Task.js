@@ -8,7 +8,11 @@ const Container = styled.div`
   padding: 8px;
   margin-bottom: 8px;
   background-color: ${props =>
-    props.isDisabled ? "lightgrey" : props.isDragging ? "lightgreen" : "white"};
+    props.isDragDisabled
+      ? "lightgrey"
+      : props.isDragging
+      ? "lightgreen"
+      : "white"};
 `;
 
 export default class Task extends Component {
